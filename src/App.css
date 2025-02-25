@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 100vh;
+  width: 100%;
+  background: url(./assets/bg_img.jpg);
+  /* filter: brightness(.7); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box{
+  border: 2px solid white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(7px);
+  height: 400px;
+  width: 300px;
+  border-radius: 80px 1px;
+  position: relative;
+  box-shadow: 0px 0px 2px 2px blue;
+}
+
+.box h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+  position: absolute;
+  top: 10%;
+  color: white;
+  font-size: 25px;
+}
+
+.box input{
+  color: white;
+  padding: 12px 10px;
+  width: 205px;
+  margin: 10px 0 25px 0;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 3px;
+}
+
+.box input:focus{
+  outline: none;
+  color: white;
+}
+
+.box input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.selection{
+  display: flex;
+  gap: 24px;
+  margin:0 0 20px 0;
+}
+
+.selection select{
+  border: 2px solid white;
+  background:white;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: black;
+  /* appearance:none; */
+}
+
+.selection select:focus{
+  outline: none;
+}
+
+
+
+.selection option{
+  height: 2px;
+  overflow: scroll;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.box button{
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+p{
+  position: absolute;
+  bottom: 9%;
+  padding: 10px;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 10px 1px;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+}
+
+
+button:hover,
+select:hover {
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+  .box{
+      backdrop-filter: none;
+      transform: scale(1.07);
+  }
+
+}
